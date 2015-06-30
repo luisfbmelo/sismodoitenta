@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^.*\.(css|jpe?g|gif|png|js|ico)$ [NC]
+
+
+RewriteRule ^terramoto terramoto.php [L]
+RewriteRule ^emocoes emocoes.php [L]
+RewriteRule ^momentos momentos.php [L]
+RewriteRule ^projeto projeto.php [L]
+
+#PORTFOLIO
+#RewriteRule portfolio/([0-9A-Za-z_]+)$ /portfolio.php?c=$1 [PT,QSA]
+#RewriteRule portfolio/([0-9A-Za-z_]+)/([0-9A-Za-z_]+)$ /portfolio.php?c=$1&s=$2 [PT,QSA]
+#RewriteRule portfolio/([0-9A-Za-z_]+)/([0-9A-Za-z_]+)/([0-9A-Za-z_]+)$ /portfolio.php?c=$1&s=$2&page=$3 [PT,QSA]
+#RewriteRule portfolio/([0-9A-Za-z_]+)/([0-9A-Za-z_]+)/([0-9A-Za-z_]+)$ /portfolio.php?c=$1&s=$2&page=$3 [PT,QSA]
+
+#DETAILS
+#RewriteRule detalhes/([0-9A-Za-z_]+)/([0-9A-Za-z_]+)$ /detalhes.php?c=$1&ar=$2 [PT,QSA]
+
+
+

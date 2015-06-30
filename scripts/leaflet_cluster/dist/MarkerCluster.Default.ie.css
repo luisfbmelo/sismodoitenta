@@ -1,0 +1,39 @@
+ /* IE 6-8 fallback colors */
+ /*FONT*/
+ @import url(http://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic);
+ /*END FONT*/
+/*.marker-cluster-small {
+	background-color: rgb(181, 226, 140);
+	}
+.marker-cluster-small div {
+	background-color: rgb(110, 204, 57);
+	}
+
+.marker-cluster-medium {
+	background-color: rgb(241, 211, 87);
+	}
+.marker-cluster-medium div {
+	background-color: rgb(240, 194, 12);
+	}
+
+.marker-cluster-large {
+	background-color: rgb(253, 156, 115);
+	}
+.marker-cluster-large div {
+	background-color: rgb(241, 128, 23);
+}*/
+
+ .marker-cluster-small div{
+     background-color: rgb(233, 193, 20);
+     font-family:'Arvo', serif;
+ }
+
+ .marker-cluster-small, .marker-cluster-medium{
+     color:#fff!important;
+ }
+
+ .marker-cluster-medium div{
+     background-color: rgb(242, 128, 57);
+     font-family:'Arvo', serif;
+ }
+

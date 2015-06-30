@@ -1,0 +1,11 @@
+.frame, .pageHeader{
+	background:url("../img/bg.jpg") no-repeat 0 100% ;
+	/*-webkit-background-size: 100%;*/ /* For WebKit*/
+    /*-moz-background-size: 100%; */   /* Mozilla*/
+    /*-o-background-size: 100%; */     /* Opera*/
+    /*background-size: 100%; */       /* Generic*/
+}
+
+.noBack{
+    background:#f3f3f3!important;
+}
