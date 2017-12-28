@@ -23,8 +23,8 @@
 		
 		
 <!--JS-->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/backstrech.js"></script>
 <script type="text/javascript" src="scripts/script.js"></script>
 <script type="text/javascript" src="scripts/validate.js"></script>
@@ -54,6 +54,11 @@
 <!--FANCYBOX-->
 <script type="text/javascript" src="scripts/fancybox/source/jquery.fancybox.js"></script>
 <link rel="stylesheet" href="scripts/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+
+<!-- Owl Carousel -->
+<script type="text/javascript" src="scripts/owl/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
 
 <!--FONT AWESOME-->
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">

@@ -1,10 +1,9 @@
 <?php
 include "../connection.php";
 include "../functions.php";
-
-if (isset($_POST["form"])){
+if (isset($_POST["form"]) || $_POST["form"]){
     $data = returnTestForm();
-
     echo json_encode($data);
+
 }
 ?>

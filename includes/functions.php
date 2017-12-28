@@ -129,7 +129,7 @@ function returnFreguesia(){
                         <option value="0">Escolha uma freguesia da listagem</option>';
         while ($dados = $query->fetch_assoc()) {
             if ($dados["id_freguesia"]!=28){
-                $bodyPrint.='<option value="'.$dados["id_freguesia"].'">'.$dados["descricao"].'</option>';
+                $bodyPrint.='<option value="'.$dados["id_freguesia"].'">'.utf8_encode($dados["descricao"]).'</option>';
             }
         }
         $bodyPrint .= '<option value="28">Outra</option>';
@@ -147,53 +147,43 @@ function getYoutubeVideos(){
     $startIndex = 1;
     $maxResults = 50;
     $htmlBody = "";
-    $totalTimes = 0;
+    $totalResults = 0;
     $curItem = 0;
 
     //ASK VIDEOS
-    $getData = file_get_contents("http://gdata.youtube.com/feeds/api/users/UCZ4ahHZTZzvZEEY87C8x4XA/uploads?v=2&alt=jsonc&start-index=".$startIndex."&max-results=".$maxResults);
+    $getData = file_get_contents("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCZ4ahHZTZzvZEEY87C8x4XA&key=AIzaSyAlMSgzWARfVJ81FEGHHqSsO5qjEUtnDLQ&maxResults=".$maxResults);
     //$getData = file_get_contents("http://gdata.youtube.com/feeds/api/users/GoGeocaching/uploads?v=2&alt=jsonc&start-index=".$startIndex."&max-results=".$maxResults);
 
     //CONVERT TO ARRAY
     $resultado=json_decode($getData,true);
 
     //TOTAL TIMES NEEDED REQUESTS
-    $totalTimes = ceil($resultado["data"]["totalItems"]/$maxResults);
+    $totalResults = count($resultado["items"]);
 
     //CREATE BEGINING OF HTML
     $boxDiv = '<div class="prevList"><i class="fa fa-chevron-left fa-2x"></i></div>';
 
     //DISABLE NEXT BTN IF NO MORE THAN 5
-    if ($resultado["data"]["totalItems"]<5){
+    /*if ($totalResults<5){
         $boxDiv.='<div class="nextList" style="display:none;"><i class="fa fa-chevron-right fa-2x"></i></div>';
     }else{
         $boxDiv.='<div class="nextList"><i class="fa fa-chevron-right fa-2x"></i></div>';
-    }
+    }*/
 
     $boxDiv.='<div class="videosBox">
-        <div class="videosMask" style="width:'.(225+10)*$resultado["data"]["totalItems"].'px">';
+        <div class="videosMask owl-carousel">';
 
     //DUE TO REQUEST LIMIT, REPEAT REQUEST UNTIL GET ALL
-    for ($a=0;$a<$totalTimes;$a++){
-        if ($a>0){
-            //ASK VIDEOS
-            $getData = file_get_contents("http://gdata.youtube.com/feeds/api/users/UCZ4ahHZTZzvZEEY87C8x4XA/uploads?v=2&alt=jsonc&start-index=".$startIndex."&max-results=".$maxResults);
-            //$getData = file_get_contents("http://gdata.youtube.com/feeds/api/users/GoGeocaching/uploads?v=2&alt=jsonc&start-index=".$startIndex."&max-results=".$maxResults);
-
-            //CONVERT TO ARRAY
-            $resultado=json_decode($getData,true);
-        }
-
-        foreach($resultado["data"]['items'] as $video){
+        foreach($resultado['items'] as $video){
             $curItem++;
 
-            $htmlBody.='<span class="videoItem" id="'.$video["id"].'" title="'.htmlentities($video["title"],ENT_NOQUOTES,"UTF-8").'">';
-                $htmlBody.='<div class="thumbImg"><img src="'.$video["thumbnail"]["hqDefault"].'" alt="'.htmlentities($video["title"],ENT_NOQUOTES,"UTF-8").'"/></div>';
-                $htmlBody.='<div class="thumbTitle">'.htmlentities(truncate($video["title"],60),ENT_NOQUOTES,"UTF-8").'</div>';
+            $htmlBody.='<span class="videoItem" id="'.$video["id"]["videoId"].'" title="'.htmlentities($video["snippet"]["title"],ENT_NOQUOTES,"UTF-8").'">';
+                $htmlBody.='<div class="thumbImg"><img src="'.$video["snippet"]["thumbnails"]["high"]["url"].'" alt="'.htmlentities($video["snippet"]["title"],ENT_NOQUOTES,"UTF-8").'"/></div>';
+                $htmlBody.='<div class="thumbTitle">'.htmlentities(truncate($video["snippet"]["title"],60),ENT_NOQUOTES,"UTF-8").'</div>';
             $htmlBody.='</span>';
         }
-        $startIndex += 50;
-    }
+        //$startIndex += 50;
+    
 
 
     $boxDiv.=$htmlBody.'</div></div>';
@@ -330,7 +320,7 @@ function getTestimonies($int="first"){
         return $bodyHtml;
 
     }else{
-        return "endData";
+        return false;
     }
 }
 

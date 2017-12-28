@@ -1,8 +1,8 @@
 <?php
-$servidor = '61794hpv086012.ikoula.com';
-$usuario = 'c6geol0g0';
+$servidor = 'localhost';
+$usuario = 'luisfbm1_sismo';
 $senha = 'kWPBC3SgLGCO';
-$banco = 'c6az0re5';
+$banco = 'luisfbm1_sismodoitenta';
 
 // Conecta-se ao banco de dados MySQL
 $mysqli = new mysqli($servidor, $usuario, $senha, $banco);

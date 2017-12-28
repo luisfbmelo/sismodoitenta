@@ -1,4 +1,12 @@
 jQuery(window).load(function(){
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        nav: false,
+        dots: true,
+        items: 4,
+        dotsEach: true
+      });
+    });
 	//$.backstretch("img/bg.jpg");
 
     /*DISABLE RIGHT CLICK ON IMAGES*/
@@ -203,6 +211,9 @@ jQuery(window).load(function(){
                     }
                 });
                 $.fancybox.hideLoading();
+            },
+            error: function(err){
+                console.error(err);
             }
         });
         //$.fancybox($(".testForm"));
@@ -290,6 +301,9 @@ jQuery(window).load(function(){
                         }
                     });
                     $.fancybox.hideLoading();
+                },
+                error: function(err){
+                    console.error(err);
                 }
             });
         }else if (hash.match(/^\d+$/)){
@@ -375,22 +389,22 @@ jQuery(window).load(function(){
             var videoId = hash;
             $.fancybox.showLoading();
 
-            $.getJSON('http://gdata.youtube.com/feeds/api/videos/'+videoId+'?v=2&alt=jsonc&callback=?',function(data,status,xhr){
+            $.getJSON('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+videoId+'&key=AIzaSyAlMSgzWARfVJ81FEGHHqSsO5qjEUtnDLQ',function(data,status,xhr){
+            //$.getJSON('http://gdata.youtube.com/feeds/api/videos/'+videoId+'?v=2&alt=jsonc&callback=?',function(data,status,xhr){
 
 
-                var str = data.data.uploaded;
-                var res = str.split("T");
-                var date = res[0];
-                var desc = htmlEscape(data.data.description);
+                var video = data.items[0]["snippet"]["localized"];
+                var genericData = data.items[0]["snippet"];
+                var desc = htmlEscape(video.description);
                 desc = desc.replace(/\n/g, '<br/>');
 
                 var videoEmbed = '<div style="display: inline-block;margin:10px 0;">';
-                videoEmbed+='<div class="videoTitle">'+htmlEscape(data.data.title)+'</div>';
-                videoEmbed+='<div class="videoDate">Carregado a '+date+'.</div>';
+                videoEmbed+='<div class="videoTitle">'+htmlEscape(video.title)+'</div>';
+                videoEmbed+='<div class="videoDate">Carregado a '+genericData.publishedAt+'.</div>';
                 videoEmbed+='<iframe width="680" height="495" src="http://www.youtube.com/embed/'+videoId+'?autoplay=1&rel=0&vq=large" frameborder="0" allowfullscreen></iframe>';
                 videoEmbed+='<div class="videoDesc">'+desc+'</div>';
-                videoEmbed+='<div class="fb-like" data-href="http://sismodoitenta.com/emocoes#'+data.data.id+'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>';
-                videoEmbed+='<div class="faceCom"><div class="fb-comments" data-href="http://sismodoitenta.com/emocoes#'+data.data.id+'" data-numposts="5"></div></div>';
+                videoEmbed+='<div class="fb-like" data-href="http://sismodoitenta.com/emocoes#'+videoId+'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>';
+                //videoEmbed+='<div class="faceCom"><div class="fb-comments" data-href="http://sismodoitenta.com/emocoes#'+videoId+'" data-numposts="5"></div></div>';
 
                 videoEmbed+='</div>';
                 //ACTIVATE FACEBOOK COMMENTS
@@ -428,7 +442,7 @@ jQuery(window).load(function(){
                         data:{ totalItems: numItems },
                         success: function(infoPrint){
                             //check if no more items
-                            if (infoPrint!="endData"){
+                            if (infoPrint!==false){
                                 //APPEND HTML TO BODY
                                 lastEl.after(infoPrint);
 
