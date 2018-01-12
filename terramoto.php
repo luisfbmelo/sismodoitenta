@@ -239,7 +239,7 @@ include "includes/global.inc.php";
                     <div class="clearAll"></div>
 
                     <div class="videoBoxFinal">
-                        <iframe width="820" height="482" src="//www.youtube.com/embed/d59GQ9Lg4HY" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="482" src="//www.youtube.com/embed/d59GQ9Lg4HY" frameborder="0" allowfullscreen></iframe>
                     </div>
 
                     <div class="fb-like" data-href="http://sismodoitenta.com/terramoto" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>

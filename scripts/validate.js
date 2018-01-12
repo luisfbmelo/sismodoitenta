@@ -484,7 +484,7 @@ $(document).ready(function(){
                             $(".statusMessage, .fancybox-overlay").delay(5000).fadeOut(500,function(){
                                 $(".statusMessage").css("display","none");
                                 $.fancybox.hideLoading();
-                                window.location = "emocoes";
+                                location.reload();
 
                             });
                         }

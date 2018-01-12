@@ -1,10 +1,26 @@
 jQuery(window).load(function(){
     $(document).ready(function(){
       $(".owl-carousel").owlCarousel({
-        nav: false,
-        dots: true,
+        nav: true,
+        dots: false,
         items: 4,
-        dotsEach: true
+        navText: ['<i class="fa fa-chevron-left fa-2x"></i>', '<i class="fa fa-chevron-right fa-2x"></i>'],
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items : 2,
+            },
+            // breakpoint from 480 up
+            480 : {
+                items : 2,
+                
+            },
+            // breakpoint from 768 up
+            768 : {
+                items : 4,
+            }
+        }
+
       });
     });
 	//$.backstretch("img/bg.jpg");
@@ -245,7 +261,7 @@ jQuery(window).load(function(){
             //APPEND HTML TO BODY
             $(".boxEmotions").append(data);
 
-            var bodyId = "#box_"+(targetId);
+            var bodyId = "#details-box_"+(targetId);
             FB.XFBML.parse(document,function(){
                 $.fancybox(bodyId,{
                     afterShow: function(){
@@ -324,7 +340,7 @@ jQuery(window).load(function(){
                         //APPEND HTML TO BODY
                         $(".boxEmotions").append(data);
 
-                        var bodyId = "#box_"+(targetId);
+                        var bodyId = "#details-box_"+(targetId);
                         FB.XFBML.parse(document,function(){
                             $.fancybox(bodyId,{
                                 afterShow: function(){
