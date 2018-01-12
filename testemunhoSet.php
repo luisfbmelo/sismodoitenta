@@ -4,7 +4,7 @@ include "includes/functions.php";
 $logged=false;
 
 //34anosdepois
-$password = '';
+$password = 'b61575e887749cf5d43f19fcd6d091ebbbfdac8b';
     if (isset($_POST['password']) && sha1($_POST['password']) == $password){
         if ($_POST['b'] == 0){
             changeStatus($_POST['a'],0);

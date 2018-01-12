@@ -918,7 +918,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 
 .videosMask{
-    height:117px;
+    /*height:117px;*/
     position:relative;
     left:0;
 
