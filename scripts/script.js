@@ -163,12 +163,7 @@ jQuery(window).load(function(){
                                   //APPEND HTML TO BODY
                                   $(".picBoxesMoments").append(infoPrint);
 
-                                  //EXECUTE THE COMPARE FUNCTION
-                                  $(targets[a]+' .imagesToCompare').beforeAfter({
-                                      animateIntro : true,
-                                      introDuration : 500,
-                                      showFullLinks : false
-                                  });
+                                  
 
                                   //CLOSE ALL POPUPS
                                   thisEl.closePopup();
@@ -178,12 +173,19 @@ jQuery(window).load(function(){
                                       $.fancybox(targets[a],{
                                         afterShow: function(){
                                             $(".fancybox-inner").attr("tabindex",1).focus();
+                                            
+                                            //EXECUTE THE COMPARE FUNCTION
+                                            $(targets[a]+' .imagesToCompare').beforeafter({
+                                                message: "Arraste"
+                                            });
+
                                             /*DISABLE RIGHT CLICK ON IMAGES*/
                                             $("img").bind("contextmenu",function(e){
                                                 e.preventDefault();
                                             });
                                         }
                                       });
+                                      
                                       $.fancybox.hideLoading();
                                   });
 
@@ -376,19 +378,18 @@ jQuery(window).load(function(){
                         //APPEND HTML TO BODY
                         $(".picBoxesMoments").append(infoPrint);
 
-                        //EXECUTE THE COMPARE FUNCTION
-                        $("#data_"+target+' .imagesToCompare').beforeAfter({
-                            animateIntro : true,
-                            introDuration : 500,
-                            showFullLinks : false
-                        });
-
 
                         //ACTIVATE FACEBOOK COMMENTS
                         FB.XFBML.parse(document,function(){
                             $.fancybox("#data_"+target,{
                                 afterShow: function(){
                                     $(".fancybox-inner").attr("tabindex",1).focus();
+
+                                    //EXECUTE THE COMPARE FUNCTION
+                                    $("#data_"+target+' .imagesToCompare').beforeafter({
+                                        message: "Arraste"
+                                    });
+
                                     /*DISABLE RIGHT CLICK ON IMAGES*/
                                     $("img").bind("contextmenu",function(e){
                                         e.preventDefault();
