@@ -94,7 +94,7 @@ function printPicBoxes($id){
                         Fonte: '.(!empty($dados['fonte']) ? $dados['fonte'] : "Sem dados").'.
                     </div>
     				<div>
-    				    <img alt="before" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" style="max-width:620px;max-height:620px;"/>
+    				    <img alt="before" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" style="width:100%;"/>
     				</div>
                     <div class="download pics">
                         <a href="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" download>
