@@ -53,20 +53,25 @@ function printPicBoxes($id){
 
             if ($dados['type']==1){
                 $dataSend= '
-                <div id="data_'.$dados['id_fotos'].'" class="compareContainer" style="display: inline-block;margin:10px 0;">
-                    <div class="dataTitle" style="width:'.$finalWidth.'px;">
-    				    '.$dados['titulo'].'
+                <div id="data_'.$dados['id_fotos'].'" class="compareContainer" style="display: inline-block;margin:10px 0; width:100%;">
+                    <div class="dataTitle" style="width:100%;">
+    				    '.(!empty($dados['titulo']) ? $dados['titulo'] : "Título desconhecido").'
                     </div>
-                    <div class="dataSource" style="width:'.$finalWidth.'px;">
-                        Fonte: '.$dados['fonte'].'.
+                    <div class="dataSource" style="width:100%;">
+                        Fonte: '.(!empty($dados['fonte']) ? $dados['fonte'] : "Sem dados").'.
                     </div>
-                    <div class="dataSource" style="margin-top:5px;margin-bottom:5px;width:'.$finalWidth.'px;">
+                    <div class="dataSource" style="margin-top:5px;margin-bottom:5px;width:100%;">
                         Fotografia atual captada pela equipa do Sismo d\'Oitenta.
                     </div>
     				<div class="imagesToCompare">
     				    <div><img alt="before" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" width="'.$finalWidth.'" height="'.$finalHeight.'" /></div>
                          <div><img alt="after" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_2'].'" width="'.$finalWidth.'" height="'.$finalHeight.'" /></div>
-     			    </div>';
+     			    </div>
+                    <div class="download pics">
+                        <a href="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" download>
+                            <i class="fa fa-download"></i> Descarregar
+                        </a>
+                    </div>';
                     if ($dados['descricao']!="" && $dados['descricao']!=NULL){
                         $dataSend.='<div class="dataDesc">
                                         '.$dados['descricao'].'
@@ -81,16 +86,21 @@ function printPicBoxes($id){
                 </div>
                 ';
             }else{
-                $dataSend= '<div id="data_'.$dados['id_fotos'].'" style="display: inline-block;margin:10px 0;">
-                    <div class="dataTitle" style="width:'.$finalWidth.'px;">
-                    '.$dados['titulo'].'
+                $dataSend= '<div id="data_'.$dados['id_fotos'].'" class="single-foto" style="display: inline-block;margin:10px 0;">
+                    <div class="dataTitle" style="width:100%;">
+                    '.(!empty($dados['titulo']) ? $dados['titulo'] : "Título desconhecido").'
                     </div>
-                    <div class="dataSource" style="width:'.$finalWidth.'px;margin-bottom:5px;">
-                        '.$dados['fonte'].'.
+                    <div class="dataSource" style="width:100%;margin-bottom:5px;">
+                        Fonte: '.(!empty($dados['fonte']) ? $dados['fonte'] : "Sem dados").'.
                     </div>
     				<div>
     				    <img alt="before" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" style="max-width:620px;max-height:620px;"/>
-    				</div>';
+    				</div>
+                    <div class="download pics">
+                        <a href="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" download>
+                            <i class="fa fa-download"></i> Descarregar
+                        </a>
+                    </div>';
                     if ($dados['descricao']!="" && $dados['descricao']!=NULL){
                         $dataSend.='<div class="dataDesc">
                                         '.$dados['descricao'].'

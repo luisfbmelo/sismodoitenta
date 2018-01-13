@@ -161,13 +161,13 @@ body, html{
 	width:90px;
 	height:90px;
 	background:url("../img/logo_90x90.jpg") no-repeat;
+    background-size:  cover;
 }
 
 .logoTxt{
 	width:360px;
 	height:90px;	
 	background:url("../img/logo_txt.png") no-repeat center center #2e2e34;
-	
 }
 
 nav{
@@ -188,6 +188,7 @@ nav ul li{
     background:#cdcdcd;
     line-height:30px;
     text-align:center;
+    margin-bottom: 10px;
 }
 
 nav ul li a{
@@ -271,6 +272,24 @@ nav ul li:hover{
     background:#f38237;
 }
 
+@media screen and (max-width:768px){
+    .header{
+        top: 30px;
+    }
+}
+
+@media screen and (max-width:419px){
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+
+    .logoTxt{
+        height: 60px;
+        width: 350px;
+    }
+}
+
 /*QUOTE*/
 .quote{
 	width:455px;
@@ -320,6 +339,14 @@ nav ul li:hover{
     padding-bottom:25px;
 }
 
+@media screen and (max-width:819px){
+    .sobreTerr > div:not(.fb-like){
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+}
+
 .textBlock{
     max-width:820px;
     width: 100%;
@@ -348,6 +375,7 @@ nav ul li:hover{
     height:210px;
     position:relative;
     float:left;
+    background:#2e2e34;
 }
 
 .box_1 .box1Text span{
@@ -496,15 +524,32 @@ nav ul li:hover{
 
 #box_5 #box5Img1{
     float:left;
-    height:311px;
-    width:475px;
+    max-height:311px;
+    max-width:475px;
+    width: 100%;
 }
 
 #box_5 #box5Img2{
     float:right;
-    height:311px;
-    width:345px;
+    max-height:311px;
+    max-width:345px;
+    width: 100%;
     position:relative;
+}
+
+@media screen and (max-width:819px){
+    #box_5 #box5Img1,
+    #box_5 #box5Img2{
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+        padding-bottom: 15px;
+    }
+
+    #box_5 img{
+        display: block;
+        width: 100%;
+    }
 }
 
 #box_5 .box5Text{
@@ -664,6 +709,8 @@ nav ul li:hover{
 .bodyContentMoments .pageDesc{
     max-width:930px;
     margin:2% auto 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .bodyContentMoments .pageDesc .momentTitle{
@@ -703,6 +750,39 @@ nav ul li:hover{
     max-width:700px;
     margin:2% auto 0;
     line-height:24px;
+}
+
+@media screen and (max-width:768px){
+    .pageHeaderMoments{
+        min-height: 90%;
+    }
+
+    .bodyContentMoments{
+        height: auto;
+    }
+}
+
+.download{
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.download a{
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f38237;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.download a:focus,
+.download a:active,
+.download a:hover{
+    text-decoration: none;
+    opacity: 0.8;
 }
 
 .bodyContentMoments .pageDesc .momentContr a{
@@ -745,10 +825,18 @@ nav ul li:hover{
 /*PROJETO*/
 .bodyContentProjeto{
     background: #f3f3f3;
+    
 }
+
+.emocoes__container{
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 .bodyContentProjeto .team{
     max-width:930px;
     margin:60px auto 0;
+    box-sizing: border-box;
 }
 
 .team .teamEl{
@@ -830,6 +918,9 @@ nav ul li:hover{
     font-family:'Arvo', serif;
     font-size:16px;
     line-height:24px;
+
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .aboutProj span{
@@ -842,7 +933,7 @@ nav ul li:hover{
 }
 
 .thankBox{
-    width:100%;
+    /*width:100%;*/
     background:#2e2e34;
     margin-top:60px;
     padding-left: 20px;
