@@ -245,7 +245,7 @@ jQuery(window).load(function(){
             //APPEND HTML TO BODY
             $(".boxEmotions").append(data);
 
-            var bodyId = "#box_"+(targetId);
+            var bodyId = "#box_testemunho_"+(targetId);
             FB.XFBML.parse(document,function(){
                 $.fancybox(bodyId,{
                     afterShow: function(){
@@ -256,7 +256,7 @@ jQuery(window).load(function(){
             });
 
           },
-          error: function(){
+          error: function(err){
               $.fancybox.hideLoading();
           }
       });
@@ -324,7 +324,7 @@ jQuery(window).load(function(){
                         //APPEND HTML TO BODY
                         $(".boxEmotions").append(data);
 
-                        var bodyId = "#box_"+(targetId);
+                        var bodyId = "#box_testemunho_"+(targetId);
                         FB.XFBML.parse(document,function(){
                             $.fancybox(bodyId,{
                                 afterShow: function(){

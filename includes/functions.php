@@ -161,8 +161,8 @@ function getYoutubeVideos(){
     $totalResults = count($resultado["items"]);
 
     //CREATE BEGINING OF HTML
-    $boxDiv = '<div class="prevList"><i class="fa fa-chevron-left fa-2x"></i></div>';
-
+    /* $boxDiv = '<div class="prevList"><i class="fa fa-chevron-left fa-2x"></i></div>'; */
+    $boxDiv = '';
     //DISABLE NEXT BTN IF NO MORE THAN 5
     /*if ($totalResults<5){
         $boxDiv.='<div class="nextList" style="display:none;"><i class="fa fa-chevron-right fa-2x"></i></div>';
@@ -177,9 +177,9 @@ function getYoutubeVideos(){
         foreach($resultado['items'] as $video){
             $curItem++;
 
-            $htmlBody.='<span class="videoItem" id="'.$video["id"]["videoId"].'" title="'.htmlentities($video["snippet"]["title"],ENT_NOQUOTES,"UTF-8").'">';
-                $htmlBody.='<div class="thumbImg"><img src="'.$video["snippet"]["thumbnails"]["high"]["url"].'" alt="'.htmlentities($video["snippet"]["title"],ENT_NOQUOTES,"UTF-8").'"/></div>';
-                $htmlBody.='<div class="thumbTitle">'.htmlentities(truncate($video["snippet"]["title"],60),ENT_NOQUOTES,"UTF-8").'</div>';
+            $htmlBody.='<span class="videoItem" id="'.$video["id"]["videoId"].'" title="'.$video["snippet"]["title"].'">';
+                $htmlBody.='<div class="thumbImg"><img src="'.$video["snippet"]["thumbnails"]["high"]["url"].'" alt="'.$video["snippet"]["title"].'"/></div>';
+                $htmlBody.='<div class="thumbTitle">'.truncate($video["snippet"]["title"],60).'</div>';
             $htmlBody.='</span>';
         }
         //$startIndex += 50;
@@ -352,7 +352,7 @@ function printTestimonial($id){
                     $testemunhoTxt = $dados["testemunho"];
                     $testemunhoTxt = str_replace(array("&lt;br/&gt;"), array("<br/>"), $testemunhoTxt);
 
-                    $bodyHtml='<div class="type1Box" id="box_'.$dados["id_testemunhos"].'">';
+                    $bodyHtml='<div class="type1Box" id="box_testemunho_'.$dados["id_testemunhos"].'">';
                         $bodyHtml.='<div class="miniTestAuthor">Testemunho de <br/><span>'.$dados["nome"].' '.$dados["sobrenome"].'</span></div>';
 
                         if ($dados["data_nasc"]!="" && isset($dados["data_nasc"]) && $dados["data_nasc"]!="0000-00-00"){
@@ -372,7 +372,7 @@ function printTestimonial($id){
 
                 //ONLY PHOTO
                 case 2:
-                    $bodyHtml='<div class="type2Box" id="box_'.$dados["id_testemunhos"].'">';
+                    $bodyHtml='<div class="type2Box" id="box_testemunho_'.$dados["id_testemunhos"].'">';
                         $bodyHtml.='<div class="miniTestAuthor">Fotografia de <br/><span>'.$dados["nome"].' '.$dados["sobrenome"].'</span></div>';
 
                         if ($dados["data_nasc"]!="" && isset($dados["data_nasc"]) && $dados["data_nasc"]!="0000-00-00"){
