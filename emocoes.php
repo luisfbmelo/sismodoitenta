@@ -41,7 +41,7 @@ include "includes/global.inc.php";
 			</div>
 
             <!--CONTENT-->
-			<div class="bodyContentProjeto">
+			<div class="bodyContentProjeto emocoes__container">
 
                 <!--YOUTUBE VIDEOS-->
                 <div class="sectionTitle">Assista aos vídeos que desenvolvemos</div>

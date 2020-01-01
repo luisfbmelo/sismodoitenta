@@ -1,10 +1,26 @@
 jQuery(window).load(function(){
     $(document).ready(function(){
       $(".owl-carousel").owlCarousel({
-        nav: false,
-        dots: true,
+
+        nav: true,
+        dots: false,
         items: 4,
-        dotsEach: true
+        navText: ['<i class="fa fa-chevron-left fa-2x"></i>', '<i class="fa fa-chevron-right fa-2x"></i>'],
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items : 2,
+            },
+            // breakpoint from 480 up
+            480 : {
+                items : 2,
+                
+            },
+            // breakpoint from 768 up
+            768 : {
+                items : 4,
+            }
+        }
       });
     });
 	//$.backstretch("img/bg.jpg");
@@ -85,98 +101,104 @@ jQuery(window).load(function(){
 
 
             for (var a=0;a<data.length;a++){
-                if (data[a].type==1){
-                    markers[a] = L.marker([data[a].lat, data[a].lon], {icon: compareIcon});
-                    markersGroup.addLayer(markers[a]);
-                    targets[a] = "#data_"+(data[a].id);
-                    itemId[a] = data[a].id;
+                if(data[a].lat && data[a].lon){
+                    if (data[a].type==1){
+                        markers[a] = L.marker([data[a].lat, data[a].lon], {icon: compareIcon});
+                        markersGroup.addLayer(markers[a]);
+                        targets[a] = "#data_"+(data[a].id);
+                        itemId[a] = data[a].id;
 
-                }else{
-                    markers[a] = L.marker([data[a].lat, data[a].lon], {icon: picIcon});
-                    markersGroup.addLayer(markers[a]);
+                    }else{
+                        markers[a] = L.marker([data[a].lat, data[a].lon], {icon: picIcon});
+                        markersGroup.addLayer(markers[a]);
 
-                    targets[a] = "#data_"+(data[a].id);
-                    itemId[a] = data[a].id;
-                }
+                        targets[a] = "#data_"+(data[a].id);
+                        itemId[a] = data[a].id;
+                    }
 
-                //bind popup
-                //var divNode = document.createElement('DIV');
-                //divNode.innerHTML = '<div class="minDataTitle">'+data[a].titulo+'</div><div class="minImg"><img src="img/mapPics/'+data[a].id+'/'+data[a].foto1+'" width="150"/></div>';
-                var divNode = '<div class="minDataTitle">'+data[a].titulo+'</div><div class="minImg"><img src="img/mapPics/'+data[a].id+'/'+data[a].foto1+'" width="150"/></div>';
-                markers[a].bindPopup(divNode);
+                    var title = data[a].titulo || "Título desconhecido";
 
-                //onmouseover
-                markers[a].on("mouseover",function(){
-                    this.openPopup();
-                });
+                    //bind popup
+                    //var divNode = document.createElement('DIV');
+                    //divNode.innerHTML = '<div class="minDataTitle">'+data[a].titulo+'</div><div class="minImg"><img src="img/mapPics/'+data[a].id+'/'+data[a].foto1+'" width="150"/></div>';
+                    var divNode = '<div class="minDataTitle">'+title+'</div><div class="minImg"><img src="img/mapPics/'+data[a].id+'/'+data[a].foto1+'" width="150"/></div>';
+                    markers[a].bindPopup(divNode);
 
-                //onmouseout
-                markers[a].on("mouseout",function(){
-                    this.closePopup();
-                });
+                    //onmouseover
+                    markers[a].on("mouseover",function(){
+                        this.openPopup();
+                    });
 
-                //onclick
+                    //onmouseout
+                    markers[a].on("mouseout",function(){
+                        this.closePopup();
+                    });
 
-                //NEED THIS CALL BACK BECAUSE THE LOOP INCREMENT DOESN'T GO TO THE MARKER IF NOT CLICKED
-                //SO IT GET'S THE LAST VALUE OF THE LOOP
-                function markerClick(a){
-                  return function(){
-                      $.fancybox.showLoading();
-                      /*ADD HASH TO URL AND MAKE SCROLL STABLE*/
-                      var x = pageXOffset, y = pageYOffset;
-                      location.hash = '#'+itemId[a];
-                      scrollTo(x,y);
-                      /*END*/
+                    //onclick
 
-                      var thisEl = this;
+                    //NEED THIS CALL BACK BECAUSE THE LOOP INCREMENT DOESN'T GO TO THE MARKER IF NOT CLICKED
+                    //SO IT GET'S THE LAST VALUE OF THE LOOP
+                    function markerClick(a){
+                      return function(){
+                          $.fancybox.showLoading();
+                          /*ADD HASH TO URL AND MAKE SCROLL STABLE*/
+                          var x = pageXOffset, y = pageYOffset;
+                          location.hash = '#'+itemId[a];
+                          scrollTo(x,y);
+                          /*END*/
 
-                      //EMPTY FOTOS BOX
-                      $(".picBoxesMoments").empty();
+                          var thisEl = this;
+
+                          //EMPTY FOTOS BOX
+                          $(".picBoxesMoments").empty();
 
 
-                      //REQUEST FOTOS TO COMPARE
-                      $.ajax({
-                          url: 'includes/requests/singleFoto.php',
-                          type:"POST",
-                          dataType: 'json',
-                          data:{ fotoId: itemId[a] },
-                          success: function(infoPrint){
-                              //APPEND HTML TO BODY
-                              $(".picBoxesMoments").append(infoPrint);
+                          //REQUEST FOTOS TO COMPARE
+                          $.ajax({
+                              url: 'includes/requests/singleFoto.php',
+                              type:"POST",
+                              dataType: 'json',
+                              data:{ fotoId: itemId[a] },
+                              success: function(infoPrint){
+                                  //APPEND HTML TO BODY
+                                  $(".picBoxesMoments").append(infoPrint);
 
-                              //EXECUTE THE COMPARE FUNCTION
-                              $(targets[a]+' .imagesToCompare').beforeAfter({
-                                  animateIntro : true,
-                                  introDuration : 500,
-                                  showFullLinks : false
-                              });
+                                  
 
-                              //CLOSE ALL POPUPS
-                              thisEl.closePopup();
+                                  //CLOSE ALL POPUPS
+                                  thisEl.closePopup();
 
-                              //ACTIVATE FACEBOOK COMMENTS
-                              FB.XFBML.parse(document,function(){
-                                  $.fancybox(targets[a],{
-                                    afterShow: function(){
-                                        $(".fancybox-inner").attr("tabindex",1).focus();
-                                        /*DISABLE RIGHT CLICK ON IMAGES*/
-                                        $("img").bind("contextmenu",function(e){
-                                            e.preventDefault();
-                                        });
-                                    }
+                                  //ACTIVATE FACEBOOK COMMENTS
+                                  FB.XFBML.parse(document,function(){
+                                      $.fancybox(targets[a],{
+                                        afterShow: function(){
+                                            $(".fancybox-inner").attr("tabindex",1).focus();
+                                            
+                                            //EXECUTE THE COMPARE FUNCTION
+                                            $(targets[a]+' .imagesToCompare').beforeafter({
+                                                message: "Arraste"
+                                            });
+
+                                            /*DISABLE RIGHT CLICK ON IMAGES*/
+                                            $("img").bind("contextmenu",function(e){
+                                                e.preventDefault();
+                                            });
+                                        }
+                                      });
+                                      
+                                      $.fancybox.hideLoading();
                                   });
-                                  $.fancybox.hideLoading();
-                              });
 
-                              //$.fancybox.hideLoading();
-                          },
-                          error: function(){
-                              //$.fancybox.hideLoading();
-                          }
-                      });
-                  }
+                                  //$.fancybox.hideLoading();
+                              },
+                              error: function(){
+                                  //$.fancybox.hideLoading();
+                              }
+                          });
+                      }
+                    }
+                    markers[a].on("click",markerClick(a));
                 }
-                markers[a].on("click",markerClick(a));
             }
 
             map.addLayer(markersGroup);
@@ -245,7 +267,7 @@ jQuery(window).load(function(){
             //APPEND HTML TO BODY
             $(".boxEmotions").append(data);
 
-            var bodyId = "#box_testemunho_"+(targetId);
+            var bodyId = "#details-box_"+(targetId);
             FB.XFBML.parse(document,function(){
                 $.fancybox(bodyId,{
                     afterShow: function(){
@@ -323,8 +345,7 @@ jQuery(window).load(function(){
                     success: function(data){
                         //APPEND HTML TO BODY
                         $(".boxEmotions").append(data);
-
-                        var bodyId = "#box_testemunho_"+(targetId);
+                        var bodyId = "#details-box_"+(targetId);
                         FB.XFBML.parse(document,function(){
                             $.fancybox(bodyId,{
                                 afterShow: function(){
@@ -356,19 +377,18 @@ jQuery(window).load(function(){
                         //APPEND HTML TO BODY
                         $(".picBoxesMoments").append(infoPrint);
 
-                        //EXECUTE THE COMPARE FUNCTION
-                        $("#data_"+target+' .imagesToCompare').beforeAfter({
-                            animateIntro : true,
-                            introDuration : 500,
-                            showFullLinks : false
-                        });
-
 
                         //ACTIVATE FACEBOOK COMMENTS
                         FB.XFBML.parse(document,function(){
                             $.fancybox("#data_"+target,{
                                 afterShow: function(){
                                     $(".fancybox-inner").attr("tabindex",1).focus();
+
+                                    //EXECUTE THE COMPARE FUNCTION
+                                    $("#data_"+target+' .imagesToCompare').beforeafter({
+                                        message: "Arraste"
+                                    });
+
                                     /*DISABLE RIGHT CLICK ON IMAGES*/
                                     $("img").bind("contextmenu",function(e){
                                         e.preventDefault();
@@ -398,9 +418,13 @@ jQuery(window).load(function(){
                 var desc = htmlEscape(video.description);
                 desc = desc.replace(/\n/g, '<br/>');
 
+                var d = new Date(genericData.publishedAt);
+                var date = (d.getDate())+"-"+(d.getMonth()+1)+"-"+d.getFullYear();
+
                 var videoEmbed = '<div style="display: inline-block;margin:10px 0;">';
                 videoEmbed+='<div class="videoTitle">'+htmlEscape(video.title)+'</div>';
-                videoEmbed+='<div class="videoDate">Carregado a '+genericData.publishedAt+'.</div>';
+
+                videoEmbed+='<div class="videoDate">Carregado a '+date+'.</div>';
                 videoEmbed+='<iframe width="680" height="495" src="http://www.youtube.com/embed/'+videoId+'?autoplay=1&rel=0&vq=large" frameborder="0" allowfullscreen></iframe>';
                 videoEmbed+='<div class="videoDesc">'+desc+'</div>';
                 videoEmbed+='<div class="fb-like" data-href="http://sismodoitenta.com/emocoes#'+videoId+'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>';

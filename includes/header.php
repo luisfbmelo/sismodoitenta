@@ -1,3 +1,5 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>Sismo d'Oitenta</title>
 <link href="img/favicon.ico" rel="SHORTCUT ICON"/>
@@ -17,6 +19,8 @@
 
 <!--CSS-->
 <link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/jquery.beforeafter.min.css" />
+
 <link rel="stylesheet" href="css/style.css" />
 		
 <link rel="stylesheet" href="css/background.css" />
@@ -26,6 +30,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/backstrech.js"></script>
+<script type="text/javascript" src="scripts/jquery.beforeafter.min.js"></script>
 <script type="text/javascript" src="scripts/script.js"></script>
 <script type="text/javascript" src="scripts/validate.js"></script>
 <script type="text/javascript" src="scripts/counterPlugin.js"></script>

@@ -1,0 +1,168 @@
+[28-Dec-2017 15:44:44 UTC] PHP Notice:  Trying to get property of non-object in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/fotos.php on line 9
+[28-Dec-2017 15:45:00 UTC] PHP Notice:  Trying to get property of non-object in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/fotos.php on line 9
+[28-Dec-2017 15:51:02 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 15:51:15 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 15:53:55 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 15:54:42 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 15:59:41 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 16:17:04 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 16:51:13 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 16:52:27 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 16:54:12 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:12 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:13 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:13 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:13 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:13 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:13 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:21 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:22 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:22 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:23 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:23 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:23 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:24 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:24 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:25 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:25 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:26 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:26 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:27 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:27 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:40 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:41 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:41 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:42 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:42 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:42 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:42 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:42 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:52 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:53 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:53 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:55 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:56 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:56 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:56 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:57 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:57 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:57 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:58 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:58 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:58 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:54:58 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:00 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:00 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:02 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:03 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:07 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:07 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:08 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:09 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:55:55 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:04 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:04 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:04 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:05 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:12 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:14 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:15 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:21 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:30 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:31 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:31 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:56:31 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:57:43 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:57:44 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:57:45 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:57:45 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:57:46 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:57:47 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:57:48 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:58:00 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:58:02 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 11
+[28-Dec-2017 16:58:03 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 11
+[28-Dec-2017 16:58:03 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 11
+[28-Dec-2017 16:58:04 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 11
+[28-Dec-2017 16:58:04 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 11
+[28-Dec-2017 16:58:09 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:58:42 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:58:44 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 5
+[28-Dec-2017 16:59:39 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 12
+[28-Dec-2017 16:59:53 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 9
+[28-Dec-2017 16:59:54 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 9
+[28-Dec-2017 16:59:54 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 9
+[28-Dec-2017 17:00:03 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 9
+[28-Dec-2017 17:04:50 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 9
+[28-Dec-2017 17:05:15 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 17:08:25 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 8
+[28-Dec-2017 17:14:37 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 4
+[28-Dec-2017 17:14:39 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 4
+[28-Dec-2017 17:16:04 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 4
+[28-Dec-2017 17:28:26 UTC] PHP Notice:  Undefined index: type in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/fotos.php on line 14
+[28-Dec-2017 17:28:26 UTC] PHP Notice:  Undefined index: type in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/fotos.php on line 17
+[28-Dec-2017 17:28:28 UTC] PHP Notice:  Undefined index: type in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 54
+[28-Dec-2017 17:34:23 UTC] PHP Notice:  Undefined index: form in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 4
+[28-Dec-2017 17:36:01 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 6
+[28-Dec-2017 17:36:03 UTC] PHP Warning:  json_encode(): Invalid UTF-8 sequence in argument in /home/luisfbm1/public_html/sismodoitenta.com/includes/requests/formTest.php on line 6
+[28-Dec-2017 17:37:50 UTC] PHP Fatal error:  Call to undefined function html_entities_encode() in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 132
+[28-Dec-2017 17:37:50 UTC] PHP Fatal error:  Call to undefined function html_entities_encode() in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 132
+[28-Dec-2017 17:37:56 UTC] PHP Fatal error:  Call to undefined function html_entities_encode() in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 132
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Notice:  Undefined variable: row in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:43:30 UTC] PHP Warning:  array_map(): Argument #2 should be an array in /home/luisfbm1/public_html/sismodoitenta.com/includes/functions.php on line 131
+[28-Dec-2017 17:44:48 UTC] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/luisfbm1/public_html/sismodoitenta.com/includes/classes/testemunho.class.php on line 150
+[28-Dec-2017 17:46:59 UTC] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/luisfbm1/public_html/sismodoitenta.com/includes/classes/testemunho.class.php on line 150
+[28-Dec-2017 17:47:41 UTC] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/luisfbm1/public_html/sismodoitenta.com/includes/classes/testemunho.class.php on line 150
+[28-Dec-2017 17:49:23 UTC] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/luisfbm1/public_html/sismodoitenta.com/includes/classes/testemunho.class.php on line 150

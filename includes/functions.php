@@ -53,20 +53,25 @@ function printPicBoxes($id){
 
             if ($dados['type']==1){
                 $dataSend= '
-                <div id="data_'.$dados['id_fotos'].'" class="compareContainer" style="display: inline-block;margin:10px 0;">
-                    <div class="dataTitle" style="width:'.$finalWidth.'px;">
-    				    '.$dados['titulo'].'
+                <div id="data_'.$dados['id_fotos'].'" class="compareContainer " style="display: inline-block;margin:10px 0; width:100%;">
+                    <div class="dataTitle" style="width:100%;">
+    				    '.(!empty($dados['titulo']) ? $dados['titulo'] : "Título desconhecido").'
                     </div>
-                    <div class="dataSource" style="width:'.$finalWidth.'px;">
-                        Fonte: '.$dados['fonte'].'.
+                    <div class="dataSource" style="width:100%;">
+                        Fonte: '.(!empty($dados['fonte']) ? $dados['fonte'] : "Sem dados").'.
                     </div>
-                    <div class="dataSource" style="margin-top:5px;margin-bottom:5px;width:'.$finalWidth.'px;">
+                    <div class="dataSource" style="margin-top:5px;margin-bottom:5px;width:100%;">
                         Fotografia atual captada pela equipa do Sismo d\'Oitenta.
                     </div>
-    				<div class="imagesToCompare">
-    				    <div><img alt="before" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" width="'.$finalWidth.'" height="'.$finalHeight.'" /></div>
-                         <div><img alt="after" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_2'].'" width="'.$finalWidth.'" height="'.$finalHeight.'" /></div>
-     			    </div>';
+    				<div class="imagesToCompare g-before-after">
+                        <img src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" data-aftersrc="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_2'].'">
+    		
+     			    </div>
+                    <div class="download pics">
+                        <a href="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" download>
+                            <i class="fa fa-download"></i> Descarregar
+                        </a>
+                    </div>';
                     if ($dados['descricao']!="" && $dados['descricao']!=NULL){
                         $dataSend.='<div class="dataDesc">
                                         '.$dados['descricao'].'
@@ -81,16 +86,21 @@ function printPicBoxes($id){
                 </div>
                 ';
             }else{
-                $dataSend= '<div id="data_'.$dados['id_fotos'].'" style="display: inline-block;margin:10px 0;">
-                    <div class="dataTitle" style="width:'.$finalWidth.'px;">
-                    '.$dados['titulo'].'
+                $dataSend= '<div id="data_'.$dados['id_fotos'].'" class="single-foto" style="display: inline-block;margin:10px 0;">
+                    <div class="dataTitle" style="width:100%;">
+                    '.(!empty($dados['titulo']) ? $dados['titulo'] : "Título desconhecido").'
                     </div>
-                    <div class="dataSource" style="width:'.$finalWidth.'px;margin-bottom:5px;">
-                        '.$dados['fonte'].'.
+                    <div class="dataSource" style="width:100%;margin-bottom:5px;">
+                        Fonte: '.(!empty($dados['fonte']) ? $dados['fonte'] : "Sem dados").'.
                     </div>
     				<div>
-    				    <img alt="before" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" style="max-width:620px;max-height:620px;"/>
-    				</div>';
+    				    <img alt="before" src="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" style="width:100%;"/>
+    				</div>
+                    <div class="download pics">
+                        <a href="img/mapPics/'.$dados['id_fotos'].'/'.$dados['foto_1'].'" download>
+                            <i class="fa fa-download"></i> Descarregar
+                        </a>
+                    </div>';
                     if ($dados['descricao']!="" && $dados['descricao']!=NULL){
                         $dataSend.='<div class="dataDesc">
                                         '.$dados['descricao'].'
@@ -163,6 +173,7 @@ function getYoutubeVideos(){
     //CREATE BEGINING OF HTML
     /* $boxDiv = '<div class="prevList"><i class="fa fa-chevron-left fa-2x"></i></div>'; */
     $boxDiv = '';
+
     //DISABLE NEXT BTN IF NO MORE THAN 5
     /*if ($totalResults<5){
         $boxDiv.='<div class="nextList" style="display:none;"><i class="fa fa-chevron-right fa-2x"></i></div>';
@@ -176,10 +187,10 @@ function getYoutubeVideos(){
     //DUE TO REQUEST LIMIT, REPEAT REQUEST UNTIL GET ALL
         foreach($resultado['items'] as $video){
             $curItem++;
-
             $htmlBody.='<span class="videoItem" id="'.$video["id"]["videoId"].'" title="'.$video["snippet"]["title"].'">';
                 $htmlBody.='<div class="thumbImg"><img src="'.$video["snippet"]["thumbnails"]["high"]["url"].'" alt="'.$video["snippet"]["title"].'"/></div>';
                 $htmlBody.='<div class="thumbTitle">'.truncate($video["snippet"]["title"],60).'</div>';
+
             $htmlBody.='</span>';
         }
         //$startIndex += 50;
@@ -352,7 +363,7 @@ function printTestimonial($id){
                     $testemunhoTxt = $dados["testemunho"];
                     $testemunhoTxt = str_replace(array("&lt;br/&gt;"), array("<br/>"), $testemunhoTxt);
 
-                    $bodyHtml='<div class="type1Box" id="box_testemunho_'.$dados["id_testemunhos"].'">';
+                    $bodyHtml='<div class="type1Box" id="details-box_'.$dados["id_testemunhos"].'">';
                         $bodyHtml.='<div class="miniTestAuthor">Testemunho de <br/><span>'.$dados["nome"].' '.$dados["sobrenome"].'</span></div>';
 
                         if ($dados["data_nasc"]!="" && isset($dados["data_nasc"]) && $dados["data_nasc"]!="0000-00-00"){
@@ -372,7 +383,7 @@ function printTestimonial($id){
 
                 //ONLY PHOTO
                 case 2:
-                    $bodyHtml='<div class="type2Box" id="box_testemunho_'.$dados["id_testemunhos"].'">';
+                    $bodyHtml='<div class="type2Box" id="details-box_'.$dados["id_testemunhos"].'">';
                         $bodyHtml.='<div class="miniTestAuthor">Fotografia de <br/><span>'.$dados["nome"].' '.$dados["sobrenome"].'</span></div>';
 
                         if ($dados["data_nasc"]!="" && isset($dados["data_nasc"]) && $dados["data_nasc"]!="0000-00-00"){
@@ -395,7 +406,7 @@ function printTestimonial($id){
                     $testemunhoTxt = $dados["testemunho"];
                     $testemunhoTxt = str_replace(array("&lt;br/&gt;"), array("<br/>"), $testemunhoTxt);
 
-                    $bodyHtml='<div class="type2Box" id="box_'.$dados["id_testemunhos"].'">';
+                    $bodyHtml='<div class="type2Box" id="details-box_'.$dados["id_testemunhos"].'">';
                         $bodyHtml.='<div class="miniTestAuthor">Testemunho e fotografia de <br/><span>'.$dados["nome"].' '.$dados["sobrenome"].'</span></div>';
 
                         if ($dados["data_nasc"]!="" && isset($dados["data_nasc"]) && $dados["data_nasc"]!="0000-00-00"){

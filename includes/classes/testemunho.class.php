@@ -145,23 +145,37 @@ class critic{
             $contato = htmlentities($contato,ENT_NOQUOTES,"UTF-8");
 
             //INSERT DATA
-            $query = $mysqli->prepare('INSERT INTO testemunhos VALUES ("NULL", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,NOW(),?,"0")');
+            if($query = $mysqli->prepare('INSERT INTO testemunhos (nome, sobrenome, contato, data_nasc, freguesia_id, testemunho, foto, user_id, tipo, foto_desc, date, status, av) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,NOW(),?, 1)')) { // assuming $mysqli is the connection
+                $rc = $query->bind_param('ssssissiisi',
+                    $nome,
+                    $sobrenome,
+                    $contato,
+                    $data_nasc,
+                    $freguesia_id,
+                    $testFinal,
+                    $foto,
+                    $userId,
+                    $type,
+                    $foto_desc,
+                    $status
+                );
+                if ( false===$rc ) {
+                  // again execute() is useless if you can't bind the parameters. Bail out somehow.
+                  //die('bind_param() failed: ' . htmlspecialchars($query->error));
+                }
 
-            $query->bind_param('ssssissiisi',
-                $nome,
-                $sobrenome,
-                $contato,
-                $data_nasc,
-                $freguesia_id,
-                $testFinal,
-                $foto,
-                $userId,
-                $type,
-                $foto_desc,
-                $status
-            );
-            $query->execute();
-            $query->close();
+                $rc = $query->execute();
+                // execute() can fail for various reasons. And may it be as stupid as someone tripping over the network cable
+                // 2006 "server gone away" is always an option
+                if ( false===$rc ) {
+                  //die('execute() failed: ' . htmlspecialchars($query->error));
+                }
+
+                $query->close();
+            } else {
+                $error = $mysqli->errno . ' ' . $mysqli->error;
+                //die($error); // 1054 Unknown column 'foo' in 'field list'
+            }   
 
             //GET ID
             $sql="SELECT * FROM testemunhos ORDER BY id_testemunhos DESC LIMIT 1";
@@ -585,7 +599,7 @@ class critic{
      * @return void
      */
     function newSubMail(){
-        date_default_timezone_set('Europe/Lisbon');
+        //date_default_timezone_set('Europe/Lisbon');
 
         $status = $this->status ? 'visível':'invisível';
 
@@ -595,7 +609,7 @@ class critic{
         $subject="Novo testemunho";
 
 
-        $fullMessage="Foi adicionado um novo testemunho de id <b>".$this->testemunhoId."</b> e nome <b>".html_entity_decode($this->nome, ENT_NOQUOTES, 'UTF-8')."</b> no dia <b>".$date."</b>, no estado <b>".$status."</b>, com o  contacto ".$this->contato." e o seguinte texto:<br/><br/><i>".html_entity_decode($this->testemunho, ENT_NOQUOTES, 'UTF-8')."</i><br/><a href=\"www.sismodoitenta.com/testemunhoSet.php?sda=".$this->testemunhoId."&ac=1\">Aceitar</a> <a href=\"www.sismodoitenta.com/demo/testemunhoSet.php?sda=".$this->testemunhoId."\">Recusar</a>";
+        $fullMessage="Foi adicionado um novo testemunho de id <b>".$this->testemunhoId."</b> e nome <b>".html_entity_decode($this->nome, ENT_NOQUOTES, 'UTF-8')."</b> no dia <b>".$date."</b>, no estado <b>".$status."</b>, com o  contacto ".$this->contato." e o seguinte texto:<br/><br/><i>".html_entity_decode($this->testemunho, ENT_NOQUOTES, 'UTF-8')."</i><br/><a href=\"www.sismodoitenta.com/testemunhoSet.php?sda=".$this->testemunhoId."&ac=1\">Aceitar</a> <a href=\"www.sismodoitenta.com/testemunhoSet.php?sda=".$this->testemunhoId."\">Recusar</a>";
         $to=strip_tags($to);
         /*$email=strip_tags($email);*/
         $message = stripslashes($message);

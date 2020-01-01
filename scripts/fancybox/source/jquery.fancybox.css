@@ -105,17 +105,32 @@
 	/*top: -18px;
 	right: -18px;*/
 	top:10px;
-	right:15px;
+	right:20px;
 	width: 15px;
 	height: 15px;
 	cursor: pointer;
 	z-index: 8040;
-
-	background:url("close.png") no-repeat;
+	
+	/*background:url("close.png") no-repeat;*/
 }
 
-.fancybox-close:hover{
-	background:url("close_hover.png") no-repeat;
+.fancybox-close:before{
+	content: "\f00d";
+	display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: black;
+	font-size: 20px;
+}
+
+.fancybox-close:hover:before{
+	/*background:url("close_hover.png") no-repeat;*/
+	opacity: 0.8;
+	color: #f38237;
 }
 
 .fancybox-nav {
@@ -274,8 +289,8 @@
 	   only screen and (min-device-pixel-ratio: 1.5){
 
 	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-		background-image: url('fancybox_sprite@2x.png');
-		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+		/*background-image: url('fancybox_sprite@2x.png');*/
+		/*background-size: 44px 152px;*/ /*The size of the normal image, half the size of the hi-res image*/
 	}
 
 	#fancybox-loading div {
