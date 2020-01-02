@@ -1513,7 +1513,7 @@ textarea:-moz-placeholder { font-size:14px; }
 
 /*TESTEMUNHO FANCYBOX*/
 .type1Box,.type2Box{
-    width:700px;
+    max-width:700px;
     margin:10px 0;
 }
 
