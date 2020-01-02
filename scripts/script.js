@@ -54,8 +54,11 @@ jQuery(window).load(function(){
           //maxBounds:[[39.074445, -27.687002],[38.261705, -26.503225]],
           //minZoom: 12,
         var map = new L.Map('map', {center: new L.LatLng(38.72194763, -27.22892761), zoom: 12,minZoom: 2, zoomAnimation: false,markerZoomAnimation: false,zoomControl:false});
-        var googleLayer = new L.Google('ROADMAP');
-        map.addLayer(googleLayer);
+        /* var googleLayer = new L.Google('ROADMAP');
+        map.addLayer(googleLayer); */
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
         //MARKERS
         var picMap='img/picMap.png',
